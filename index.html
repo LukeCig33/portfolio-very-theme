@@ -8,7 +8,9 @@
   <meta name="Description" content="Demonstration for portfolio-very-theme">
 
   <style>
-    :root, html, body {
+    :root,
+    html,
+    body {
       margin: 0;
       padding: 0;
     }
@@ -16,28 +18,99 @@
       margin: var(--ddd-spacing-2);
     }
     portfolio-very-theme {
-      margin: var(--ddd-spacing-2);
-      border: var(--ddd-border-md);
-      border-radius: var(--ddd-radius-lg);
+      width: 100%;
+      height: 100vh;
+      color: white;
+      background-color: var(--ddd-primary-1);
     }
     portfolio-very-theme:hover {
       box-shadow: var(--ddd-boxShadow-sm);
+    }
+    scroll-button {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      margin: var(--ddd-spacing-2);
     }
     #example {
       --portfolio-very-theme-font-size: var(--ddd-font-size-l);
       background-color: var(--ddd-accent-2);
       color: var(--ddd-primary-17);
     }
+    your-banner a {
+      border: 2px solid white;
+      padding: 10px;
+      display: inline-block;
+      margin: 10px;
+      background-color: white;
+      color: white;
+      text-decoration: none;
+    }
+    your-banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #00000066;
+      position: fixed;
+      top: 100px;
+      left: 0;
+      height: 100px;
+      width: 100%;
+      right: 0;
+      z-index: 1;
+    }
   </style>
   <title>portfolio-very-theme</title>
 </head>
 
 <body>
-  <div id="demo">
-    <h1>portfolio-very-theme</h1>
-    <!-- this is going to do whatever the tag's defaults are -->
-    <h2>Default</h2>
-    <portfolio-very-theme></portfolio-very-theme>
-    </div>
+  <portfolio-very-theme>
+    <a name="1"></a>
+    <portfolio-screen Title="About">
+      <h1>About</h1>
+      <p>Here is a lot of info about me: enter info</p>
+      <your-banner>
+        <a href="#1">About</a>
+        <a href="#2">Research</a>
+        <a href="#3">Presentations</a>
+        <a href="#4">Professional Development</a>
+        <a href="#5">Contact</a>
+      </your-banner>
+    </portfolio-screen>
+  </portfolio-very-theme>
+  <portfolio-very-theme color="2">
+    <a name="2"></a>
+    <portfolio-screen Title="Research">
+      <h1>Research</h1>
+      <p>A bunch of content here</p>
+    </portfolio-screen>
+  </portfolio-very-theme>
+  <portfolio-very-theme>
+    <a name="3"></a>
+    <portfolio-screen Title="Presentations">
+      <h1>Presentations</h1>
+      <p>A bunch of content here</p>
+    </portfolio-screen>
+  </portfolio-very-theme>
+  <portfolio-very-theme>
+    <a name="4"></a>
+    <portfolio-screen Title="Professional Development">
+      <h1>Professional Development</h1>
+      <p>A bunch of content here</p>
+    </portfolio-screen>
+  </portfolio-very-theme>
+  <portfolio-very-theme>
+    <a name="5"></a>
+    <portfolio-screen Title="Contact">
+      <h1>Contact</h1>
+      <p>A bunch of content here</p>
+    </portfolio-screen>
+  </portfolio-very-theme>
+  <scroll-button>
+    <button>Scroll to top</button>
+  </scroll-button>
+  <script type="module" src="./portfolio-very-theme.js"></script>
+
+  <style></style>
 </body>
 </html>
