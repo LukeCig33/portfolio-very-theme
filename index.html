@@ -63,51 +63,83 @@
   <title>portfolio-very-theme</title>
 </head>
 
+
 <body>
-  <portfolio-very-theme>
-    <a name="1"></a>
-    <portfolio-screen Title="About">
-      <h1>About</h1>
-      <p>Here is a lot of info about me: enter info</p>
-      <your-banner>
-        <a href="#1">About</a>
-        <a href="#2">Research</a>
-        <a href="#3">Presentations</a>
-        <a href="#4">Professional Development</a>
-        <a href="#5">Contact</a>
-      </your-banner>
-    </portfolio-screen>
-  </portfolio-very-theme>
-  <portfolio-very-theme color="2">
-    <a name="2"></a>
-    <portfolio-screen Title="Research">
-      <h1>Research</h1>
-      <p>A bunch of content here</p>
-    </portfolio-screen>
-  </portfolio-very-theme>
-  <portfolio-very-theme>
-    <a name="3"></a>
-    <portfolio-screen Title="Presentations">
-      <h1>Presentations</h1>
-      <p>A bunch of content here</p>
-    </portfolio-screen>
-  </portfolio-very-theme>
-  <portfolio-very-theme>
-    <a name="4"></a>
-    <portfolio-screen Title="Professional Development">
-      <h1>Professional Development</h1>
-      <p>A bunch of content here</p>
-    </portfolio-screen>
-  </portfolio-very-theme>
-  <portfolio-very-theme>
-    <a name="5"></a>
-    <portfolio-screen Title="Contact">
-      <h1>Contact</h1>
-      <p>A bunch of content here</p>
-    </portfolio-screen>
-  </portfolio-very-theme>
+  <header color="1">
+    <h1>Portfolio</h1>
+  </header>
+  <section>
+    <portfolio-very-theme title="About" color="1">
+      <a name="1"></a>
+      <portfolio-screen color="1">
+        <p>Brief professional bio (research focus, academic background, key acheivements).</p>
+        <p>Professional headshot.</p>
+        <p>Concise mission statement or research interests.</p>
+        <your-banner>
+          <a href="#1">About</a>
+          <a href="#2">Research</a>
+          <a href="#3">Presentations</a>
+          <a href="#4">Professional Development</a>
+          <a href="#5">Contact</a>
+        </your-banner>
+      </portfolio-screen>
+    </portfolio-very-theme>
+  </section>
+
+  <section>
+    <portfolio-very-theme title ="Research" color="2">
+      <a name="2"></a>
+      <portfolio-screen color="2">
+        <p>Overview of research areas.</p>
+        <p>List of key projects (include brief summaries and outcomes)</p>
+        <p>Highlight publications (include links to jounrals or PDFs if allowed)</p>
+      </portfolio-screen>
+    </portfolio-very-theme>
+  </section>
+
+  <section>
+    <portfolio-very-theme title="Presentations & Publications" color="3">
+      <a name="3"></a>
+      <portfolio-screen color="3">
+        <p>Peer-reviewed papers, book chapters, and reports.</p>
+        <p>Link to full-text articles if available.</p>
+        <p>Include citation information (APA format).</p>
+        <p>Conference talks, seminars, and guest lectures.</p>
+        <p>Include event name, date, and title.</p>
+        <p>Link to slides or videos if available.</p>
+      </portfolio-screen>
+    </portfolio-very-theme>
+  </section>
+
+  <section>
+    <portfolio-very-theme title="Professional Development" color="4">
+      <a name="4"></a>
+      <portfolio-screen color="4">
+        <h4>TEACHING / MENTORING</h4>
+        <p>Courses taught, teaching philosphy.</p>
+        <p>Student mentorship, supervision, and collaborations.</p>
+        <h4>AWARDS & GRANTS</h4>
+        <p>Fellowships, research grants, and academic awards.</p>
+        <p>Include funding organizations and amounts (if appropriate).</p>
+        <h4>MEDIA & OUTREACH (OPTIONAL FOR VISIBILITY)</h4>
+        <p>Press coverage, interviews, and podcasts.</p>
+        <p>Public outreach activities (blogs, op-eds, etc.).</p>
+      </portfolio-screen>
+    </portfolio-very-theme>
+  </section>
+
+  <section>
+    <portfolio-very-theme title="Contact" color="5">
+      <a name="5"></a>
+      <portfolio-screen color="5">
+        <p>A bunch of content here</p>
+      </portfolio-screen>
+    </portfolio-very-theme>
+  </section>
+
   <scroll-button>
-    <button>Scroll to top</button>
+    <button>
+      <img src="path/to/up-arrow.png" alt="Scroll to top" style="width: 24px; height: 24px;" />    </button>
   </scroll-button>
   <script type="module" src="./portfolio-very-theme.js"></script>
 

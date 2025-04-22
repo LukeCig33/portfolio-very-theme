@@ -6,6 +6,7 @@ import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import "@haxtheweb/scroll-button/scroll-button.js";
+import "@haxtheweb/simple-cta/simple-cta.js";
 
 /**
  * `portfolio-very-theme`
@@ -25,7 +26,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     this.t = this.t || {};
     this.t = {
       ...this.t,
-      title: "Title",
+      title: "",
     };
     this.registerLocalization({
       context: this,
@@ -50,15 +51,21 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     return [
       super.styles,
       css`
-        :host {
-          display: block;
-          color: var(--ddd-theme-primary);
-          font-family: var(--ddd-font-navigation);
-        }
-        .wrapper {
-          margin: var(--ddd-spacing-2);
-          padding: var(--ddd-spacing-4);
-        }
+      :host {
+        display: block;
+        font-family: var(--ddd-font-navigation);
+      }
+      .wrapper {
+        margin: 0;
+        padding: var(--ddd-spacing-4);
+        width: 100%;
+        height: 100%;
+      }
+      .section {
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 8px;
+        color: var(--ddd-theme-primary);
       `,
     ];
   }
@@ -69,6 +76,12 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       class="wrapper"
       style="background-color: var(--ddd-primary-${this.color});"
     >
+    <div class="section">
+      <h1>${this.title}</h1>
+      <slot></slot>
+      <p>${this.t.description}</p>
+      <p>${this.t.intro}</p>
+      </div>
       <slot></slot>
     </div>`;
   }
