@@ -38,12 +38,15 @@
       color: var(--ddd-primary-17);
     }
     your-banner a {
-      border: 2px solid white;
       padding: 10px;
       display: inline-block;
       margin: 10px;
       background-color: white;
-      color: white;
+      border-radius: 8px;
+      border-color: white;
+      border-width: 1px;
+      border-style: solid;
+      color: var(--ddd-theme-accent) !important;
       text-decoration: none;
     }
     your-banner {
@@ -68,74 +71,69 @@
   <header color="1">
     <h1>Portfolio</h1>
   </header>
+  <your-banner>
+    <a href="#1">About</a>
+    <a href="#2">Research</a>
+    <a href="#3">Presentations & Publications</a>
+    <a href="#4">Professional Development</a>
+    <a href="#5">Contact</a>
+  </your-banner>
   <section>
-    <portfolio-very-theme title="About" color="1">
-      <a name="1"></a>
-      <portfolio-screen color="1">
+    <portfolio-very-theme>
+      <portfolio-screen id="1" title="About"color="1">
+        <div class="anchor-offset" id="1"></div>
+        <text-content>
         <p>Brief professional bio (research focus, academic background, key acheivements).</p>
         <p>Professional headshot.</p>
         <p>Concise mission statement or research interests.</p>
-        <your-banner>
-          <a href="#1">About</a>
-          <a href="#2">Research</a>
-          <a href="#3">Presentations</a>
-          <a href="#4">Professional Development</a>
-          <a href="#5">Contact</a>
-        </your-banner>
+      </text-content>
       </portfolio-screen>
-    </portfolio-very-theme>
-  </section>
-
-  <section>
-    <portfolio-very-theme title ="Research" color="2">
-      <a name="2"></a>
-      <portfolio-screen color="2">
+      <portfolio-screen id="2" title="Research" color="2">
+        <div class="anchor-offset" id="2"></div>
+        <text-content>
         <p>Overview of research areas.</p>
         <p>List of key projects (include brief summaries and outcomes)</p>
         <p>Highlight publications (include links to jounrals or PDFs if allowed)</p>
+      </text-content>
       </portfolio-screen>
-    </portfolio-very-theme>
-  </section>
-
-  <section>
-    <portfolio-very-theme title="Presentations & Publications" color="3">
-      <a name="3"></a>
-      <portfolio-screen color="3">
+      <portfolio-screen id="3" title="Presentations & Publications" color="3">
+        <div class="anchor-offset" id="3"></div>
+        <text-content>
         <p>Peer-reviewed papers, book chapters, and reports.</p>
         <p>Link to full-text articles if available.</p>
         <p>Include citation information (APA format).</p>
         <p>Conference talks, seminars, and guest lectures.</p>
         <p>Include event name, date, and title.</p>
         <p>Link to slides or videos if available.</p>
+      </text-content>
       </portfolio-screen>
-    </portfolio-very-theme>
-  </section>
-
-  <section>
-    <portfolio-very-theme title="Professional Development" color="4">
-      <a name="4"></a>
-      <portfolio-screen color="4">
+      <portfolio-screen id="4" title="Professional Development" color="4">
+        <div class="anchor-offset" id="4"></div>
         <h4>TEACHING / MENTORING</h4>
+        <text-content>
         <p>Courses taught, teaching philosphy.</p>
         <p>Student mentorship, supervision, and collaborations.</p>
+        </text-content>
         <h4>AWARDS & GRANTS</h4>
+        <text-content>
         <p>Fellowships, research grants, and academic awards.</p>
         <p>Include funding organizations and amounts (if appropriate).</p>
+        </text-content>
         <h4>MEDIA & OUTREACH (OPTIONAL FOR VISIBILITY)</h4>
+        <text-content>
         <p>Press coverage, interviews, and podcasts.</p>
         <p>Public outreach activities (blogs, op-eds, etc.).</p>
+      </text-content>
+      </portfolio-screen>
+      <portfolio-screen id="5" title="Contact" color="5">
+        <div class="anchor-offset" id="5"></div>
+        <text-content>
+        <p>A bunch of content here</p>
+      </text-content>
       </portfolio-screen>
     </portfolio-very-theme>
   </section>
 
-  <section>
-    <portfolio-very-theme title="Contact" color="5">
-      <a name="5"></a>
-      <portfolio-screen color="5">
-        <p>A bunch of content here</p>
-      </portfolio-screen>
-    </portfolio-very-theme>
-  </section>
 
   <scroll-button>
     <button>
