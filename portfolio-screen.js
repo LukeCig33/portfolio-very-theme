@@ -30,10 +30,6 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
     };
     this.registerLocalization({
       context: this,
-      localesPath:
-        new URL("./locales/portfolio-screen.ar.json", import.meta.url).href +
-        "/../",
-      locales: ["ar", "es", "hi", "zh"],
     });
   }
 
