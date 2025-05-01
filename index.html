@@ -26,120 +26,100 @@
     portfolio-very-theme:hover {
       box-shadow: var(--ddd-boxShadow-sm);
     }
-    scroll-button {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      margin: var(--ddd-spacing-2);
-    }
     #example {
       --portfolio-very-theme-font-size: var(--ddd-font-size-l);
       background-color: var(--ddd-accent-2);
       color: var(--ddd-primary-17);
     }
-    your-banner a {
-      padding: 10px;
-      display: inline-block;
-      margin: 10px;
-      background-color: white;
-      border-radius: 8px;
-      border-color: white;
-      border-width: 1px;
-      border-style: solid;
-      color: var(--ddd-theme-accent) !important;
-      text-decoration: none;
-    }
-    your-banner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #00000066;
-      position: fixed;
-      top: 100px;
-      left: 0;
-      height: 100px;
-      width: 100%;
-      right: 0;
-      z-index: 1;
-    }
+
   </style>
   <title>portfolio-very-theme</title>
 </head>
 
 
 <body>
-  <header color="1">
-    <h1>Portfolio</h1>
-  </header>
+
   <your-banner>
-    <a href="#1">About</a>
-    <a href="#2">Research</a>
-    <a href="#3">Presentations & Publications</a>
-    <a href="#4">Professional Development</a>
-    <a href="#5">Contact</a>
+    <a href="#screen-1">About</a>
+    <a href="#screen-2">Research</a>
+    <a href="#screen-3">Presentations & Publications</a>
+    <a href="#screen-4">Future Goals</a>
+    <a href="#screen-5">Contact</a>
   </your-banner>
   <section>
     <portfolio-very-theme>
       <portfolio-screen id="1" title="About"color="1">
         <div class="anchor-offset" id="1"></div>
+        <div slot="image">
+          <img src="https://pbs.twimg.com/profile_images/1665011983580639232/VjxCiWH9_400x400.jpg" alt="Headshot" />
+        </div>
         <text-content>
-        <p>Brief professional bio (research focus, academic background, key acheivements).</p>
-        <p>Professional headshot.</p>
-        <p>Concise mission statement or research interests.</p>
+        <p>Hello, my name is Luke Cignetti and I created this portfolio as my final project for my IST 256 class.
+          I am finishing up my sophmore year at Penn State University and I am majoring in Cybersecurity.
+          At Penn State I am involved with my Fraternity, THON, and intramural sports.
+          I love to learn new things and this project was an awesome experience.
+        </p>
       </text-content>
       </portfolio-screen>
       <portfolio-screen id="2" title="Research" color="2">
         <div class="anchor-offset" id="2"></div>
         <text-content>
-        <p>Overview of research areas.</p>
-        <p>List of key projects (include brief summaries and outcomes)</p>
-        <p>Highlight publications (include links to jounrals or PDFs if allowed)</p>
+        <p>In my time so far at Penn State I have learned a lot of useful skills such as Java, JavaScript, HTML, SQL, and SSH commands.
+          While I wouldn't consider myself an expert in any of these languages I have a good understanding of how they work and how to use them.
+          I look forward to using these languages more and increasing my skills with them.
+          I have also learned how to use GitHub and how to work with other people on projects.
+        </p>
       </text-content>
       </portfolio-screen>
       <portfolio-screen id="3" title="Presentations & Publications" color="3">
         <div class="anchor-offset" id="3"></div>
-        <text-content>
-        <p>Peer-reviewed papers, book chapters, and reports.</p>
-        <p>Link to full-text articles if available.</p>
-        <p>Include citation information (APA format).</p>
-        <p>Conference talks, seminars, and guest lectures.</p>
-        <p>Include event name, date, and title.</p>
-        <p>Link to slides or videos if available.</p>
-      </text-content>
+        <div slot="image">
+          <img
+            class="section-image"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw8AHWfvfU99X7gPZDKalDYZWcC_ROQc4Fag&s"
+            alt="GitHub"
+          />
+        </div>
+        <p>In this class I have created a bunch of different web components. Feel free to check them out on my GitHub page!</p>
+        <p>
+          GitHub:
+          <a href="https://github.com/LukeCig33" target="_blank" rel="noopener">
+            https://github.com/LukeCig33
+          </a>
+        </p>
       </portfolio-screen>
-      <portfolio-screen id="4" title="Professional Development" color="4">
+      <portfolio-screen id="4" title="Future Goals" color="4">
         <div class="anchor-offset" id="4"></div>
-        <h4>TEACHING / MENTORING</h4>
         <text-content>
-        <p>Courses taught, teaching philosphy.</p>
-        <p>Student mentorship, supervision, and collaborations.</p>
-        </text-content>
-        <h4>AWARDS & GRANTS</h4>
-        <text-content>
-        <p>Fellowships, research grants, and academic awards.</p>
-        <p>Include funding organizations and amounts (if appropriate).</p>
-        </text-content>
-        <h4>MEDIA & OUTREACH (OPTIONAL FOR VISIBILITY)</h4>
-        <text-content>
-        <p>Press coverage, interviews, and podcasts.</p>
-        <p>Public outreach activities (blogs, op-eds, etc.).</p>
+        <p>With my expected graduation date being May of 2027, I still have some time to plan out my future and what I want to accomplish.
+          I am looking to use my degree in Cybersecurity to help businesses and people protect their data and information.
+          I am looking to join a club or organization that focuses on Cybersecurity and how to protect data.
+          I am also looking to just fully explore and enjoy my time at Penn State.
+        </p>
       </text-content>
       </portfolio-screen>
-      <portfolio-screen id="5" title="Contact" color="5">
-        <div class="anchor-offset" id="5"></div>
+      <portfolio-screen id="screen-5" title="Contact" color="5">
+        <div class="anchor-offset" id="screen-5"></div>
         <text-content>
-        <p>A bunch of content here</p>
-      </text-content>
+          <p>Feel free to contact me on LinkedIn</p>
+          <p>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/luke-cignetti/" target="_blank" rel="noopener">
+              https://www.linkedin.com/in/luke-cignetti/
+            </a>
+          </p>
+          <img
+            src="https://media.licdn.com/dms/image/v2/D4D12AQHtjFkDaFLijQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1695298178786?e=2147483647&v=beta&t=1p1T_jknn76tg5L9nld5ZWQxaG1DbdF02OL3cPR7YO8"
+            alt="LinkedIn"
+            style="max-width: 600px; margin-top: 20px; border-radius: 8px;"
+          />
+        </text-content>
       </portfolio-screen>
     </portfolio-very-theme>
   </section>
 
 
-  <scroll-button>
-    <button>
-      <img src=https://png.pngtree.com/png-vector/20190419/ourmid/pngtree-vector-up-arrow-icon-png-image_956434.jpg alt="Scroll to top" style="width: 24px; height: 24px;" />
-    </button>
-  </scroll-button>
+
   <script type="module" src="./portfolio-very-theme.js"></script>
 
   <style></style>

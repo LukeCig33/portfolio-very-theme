@@ -7,20 +7,17 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import "@haxtheweb/scroll-button/scroll-button.js";
 import "@haxtheweb/simple-cta/simple-cta.js";
-import "./portfolio-screen.js";
-import "./your-banner.js";
-import "./scroll-button.js";
 
 /**
- * `portfolio-very-theme`
+ * `portfolio-screen`
  *
  * @demo index.html
- * @element portfolio-very-theme
+ * @element your-banner
  */
-export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
+export class YourBanner extends DDDSuper(I18NMixin(LitElement)) {
 
   static get tag() {
-    return "portfolio-very-theme";
+    return "your-banner";
   }
 
   constructor() {
@@ -33,10 +30,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     };
     this.registerLocalization({
       context: this,
-      localesPath:
-        new URL("./locales/portfolio-very-theme.ar.json", import.meta.url).href +
-        "/../",
-      locales: ["ar", "es", "hi", "zh"],
     });
   }
 
@@ -54,17 +47,30 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     return [
       super.styles,
       css`
-        :host {
-          display: block;
-          height: 100vh;
-        }
+      :host {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #00000066;
+      position: fixed;
+      top: 100px;
+      left: 0;
+      height: 100px;
+      width: 100%;
+      right: 0;
+      z-index: 1;
+    }
 
-        .wrapper {
-          margin: 0;
-          padding: 0; /* remove var(--ddd-spacing-4) */
-          width: 100%;
-          height: 100%;
-        }
+    a {
+      padding: 10px;
+      display: inline-block;
+      margin: 10px;
+      background-color: white;
+      border-radius: 8px;
+      border: 1px solid white;
+      color: var(--ddd-theme-accent) !important;
+      text-decoration: none;
+    }
       `,
     ];
   }
@@ -72,19 +78,11 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   // Lit render the HTML
   render() {
     return html`
-      <div
-        class="wrapper"
-        style="background-color: var(--ddd-primary-${this.color});"
-      >
-      <div class="section">
-          <h1>${this.title}</h1>
-          <div class="text-content">
-            <slot></slot>
-            <p>${this.t.description}</p>
-            <p>${this.t.intro}</p>
-          </div>
-        </div>
-      </div>
+      <a href="#1">About</a>
+      <a href="#2">Research</a>
+      <a href="#3">Presentations & Publications</a>
+      <a href="#4">Future Goals</a>
+      <a href="#5">Contact</a>
     `;
   }
 
@@ -97,4 +95,4 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   }
 }
 
-globalThis.customElements.define(PortfolioVeryTheme.tag, PortfolioVeryTheme);
+globalThis.customElements.define(YourBanner.tag, YourBanner);

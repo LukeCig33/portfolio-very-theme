@@ -61,6 +61,12 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
         flex-direction: column;
         justify-content: center;
       }
+      .content-layout {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 20px;
+      }
       .section {
         margin: 20px;
         padding: 10px 40px 10px 10px;
@@ -68,14 +74,23 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
         color: var(--ddd-theme-primary);
         text-align: right;
       }
+      .section-image {
+        max-width: 200px;
+        height: auto;
+        border-radius: 8px;
+        margin: 0 0 20px 20px;
+        display: block;
+      }
       .text-content {
-        line-height: 1; /* Line height for better readability */
-        color: var(--ddd-theme-secondary); /* Secondary text color */
-        padding: 10px; /* Add padding around the text */
         text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 800px; /* optional, for cleaner text width */
+        padding: 20px;
+        color: var(--ddd-theme-secondary);
       }
       .text-content p {
-        margin: 10px 0; /* Add spacing between paragraphs */
         text-align: left;
       }
       .anchor-offset {
@@ -103,10 +118,11 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
       >
         <div class="section">
           <h1>${this.title}</h1>
-          <div class="text-content">
-            <slot></slot>
-            <p>${this.t.description}</p>
-            <p>${this.t.intro}</p>
+          <div class="content-layout">
+            <slot name="image"></slot>
+            <div class="text-content">
+              <slot></slot>
+            </div>
           </div>
         </div>
       </div>

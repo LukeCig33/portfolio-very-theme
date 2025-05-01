@@ -7,20 +7,17 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 import "@haxtheweb/scroll-button/scroll-button.js";
 import "@haxtheweb/simple-cta/simple-cta.js";
-import "./portfolio-screen.js";
-import "./your-banner.js";
-import "./scroll-button.js";
 
 /**
- * `portfolio-very-theme`
+ * `scroll-button`
  *
  * @demo index.html
- * @element portfolio-very-theme
+ * @element scroll-button
  */
-export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
+export class ScrollButton extends DDDSuper(I18NMixin(LitElement)) {
 
   static get tag() {
-    return "portfolio-very-theme";
+    return "scroll-button";
   }
 
   constructor() {
@@ -33,10 +30,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     };
     this.registerLocalization({
       context: this,
-      localesPath:
-        new URL("./locales/portfolio-very-theme.ar.json", import.meta.url).href +
-        "/../",
-      locales: ["ar", "es", "hi", "zh"],
     });
   }
 
@@ -54,37 +47,40 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     return [
       super.styles,
       css`
-        :host {
-          display: block;
-          height: 100vh;
-        }
+      :host {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      margin: var(--ddd-spacing-2);
+    }
 
-        .wrapper {
-          margin: 0;
-          padding: 0; /* remove var(--ddd-spacing-4) */
-          width: 100%;
-          height: 100%;
-        }
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
       `,
     ];
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   // Lit render the HTML
   render() {
     return html`
-      <div
-        class="wrapper"
-        style="background-color: var(--ddd-primary-${this.color});"
-      >
-      <div class="section">
-          <h1>${this.title}</h1>
-          <div class="text-content">
-            <slot></slot>
-            <p>${this.t.description}</p>
-            <p>${this.t.intro}</p>
-          </div>
-        </div>
-      </div>
+      <button @click="${this.scrollToTop}">
+        <img
+          src="https://png.pngtree.com/png-vector/20190419/ourmid/pngtree-vector-up-arrow-icon-png-image_956434.jpg"
+          alt="Scroll to top"
+        />
+      </button>
     `;
   }
 
@@ -97,4 +93,4 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   }
 }
 
-globalThis.customElements.define(PortfolioVeryTheme.tag, PortfolioVeryTheme);
+globalThis.customElements.define(ScrollButton.tag, ScrollButton);
