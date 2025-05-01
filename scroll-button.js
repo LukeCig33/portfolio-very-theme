@@ -47,22 +47,24 @@ export class ScrollButton extends DDDSuper(I18NMixin(LitElement)) {
     return [
       super.styles,
       css`
-      :host {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      margin: var(--ddd-spacing-2);
+    :host {
+      position: fixed !important;
+      bottom: 20px !important;
+      right: 20px !important;
+      z-index: 9999;
+      display: block;
     }
 
     button {
       background: none;
       border: none;
       cursor: pointer;
+      padding: 0;
     }
 
     img {
-      width: 24px;
-      height: 24px;
+      width: 40px;
+      height: 40px;
     }
       `,
     ];
